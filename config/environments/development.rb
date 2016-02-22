@@ -21,7 +21,9 @@ Rails.application.configure do
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
-
+class Application < Rails::Application
+  config.web_console.whitelisted_ips = '182.185.254.183'
+end
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.

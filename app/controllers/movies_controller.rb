@@ -10,9 +10,13 @@ class MoviesController < ApplicationController
     # will render app/views/movies/show.<extension> by default
   end
 
-  def index
+def index
     @movies = Movie.all
-  end
+    if params[:sort]
+      @movie = Movie.find(1,5)
+            
+    end
+end
 
   def new
     # default: render 'new' template
